@@ -1,0 +1,16 @@
+[Unit]
+Description=Save data received from victron smart solar to InfluxDB
+After=mosquitto.service
+
+[Service]
+WorkingDirectory=/opt/victron-mqtt2influxdb
+ExecStart=/opt/victron-mqtt2influxdb/victron-mqtt2influxdb.py
+Type=simple
+User=csp
+Restart=always
+RestartSec=5s
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target
+

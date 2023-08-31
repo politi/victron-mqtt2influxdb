@@ -1,0 +1,21 @@
+influxdb:
+    address: 127.0.0.1
+    port: 8086
+    database: victron
+    username: 
+    password: 
+
+
+## MQTT server
+##   host: IP or Hostname
+##   port: 1883
+##   topic: victron
+##   username: MQTT_USER  --> leave blank if empty. Do Not comment
+##   password: PASSWORD   --> leave blank if empty. Do Not comment
+mqtt:
+    address: 127.0.0.1
+    port: 1883
+    topic: victron/+/+    # --> # victron/[DEVICETYPE]/[DEVICENAME]  --> victron/smartsolar/HQ222093NKZ
+    username: 
+    password: 
+
